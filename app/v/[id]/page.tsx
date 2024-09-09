@@ -162,7 +162,7 @@ export default async function Video({ params }: PageProps) {
             <h1 className="text-2xl font-bold text-center my-4">
                 Related Videos
             </h1>
-            <SearchCardList query={file.title.split(" - ")} />
+            <SearchCardList query={file.title.split(" - ").slice(-2).join(" ")} />
         </div>
     );
 }
