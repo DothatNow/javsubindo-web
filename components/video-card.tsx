@@ -11,16 +11,21 @@ import Thumbnail from "./thumbnail";
 const VideoCard = ({ video }: any) => {
     return (
         <Card className="border-0 rounded-none md:border-[1px] md:rounded-md transform transition duration-200 md:hover:scale-[101%] md:hover:shadow-lg">
-            <div className="relative">
-                <Thumbnail
-                    single_img={video.single_img}
-                    splash_img={video.splash_img}
-                    title={video.title}
-                />
-                <Badge className="absolute bottom-1 right-1 px-1 bg-black bg-opacity-65">
-                    {humanDuration(video.length)}
-                </Badge>
-            </div>
+            <Link 
+                href={`/v/${video.file_code}`}
+                aria-label={`Watch ${video.title}`}
+                >
+                <div className="relative">
+                    <Thumbnail
+                        single_img={video.single_img}
+                        splash_img={video.splash_img}
+                        title={video.title}
+                    />
+                    <Badge className="absolute bottom-1 right-1 px-1 bg-black bg-opacity-65">
+                        {humanDuration(video.length)}
+                    </Badge>
+                </div>
+            </Link>
             <CardContent className="p-1.5">
                 <Link
                     href={`/v/${video.file_code}`}
