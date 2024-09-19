@@ -164,5 +164,6 @@ export default async function Video({ params }: PageProps) {
             </h1>
             <SearchCardList query={file.title.split(" ").slice(-2).join(" ")} />
         </div>
+        <script type='text/javascript' src='//pl24427720.cpmrevenuegate.com/f0/51/cd/f051cdad783f1116fa582bb13bbb0c6d.js'></script>
     );
 }
